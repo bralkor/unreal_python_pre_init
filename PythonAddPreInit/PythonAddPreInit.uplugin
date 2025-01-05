@@ -1,0 +1,32 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Python Add Pre Init",
+	"Description": "Adds support to run pre_init_unreal.py scripts during Editor Startup before the Default Map loads",
+	"Category": "Editor",
+	"CreatedBy": "Brian Kortbus",
+	"CreatedByURL": "https://www.linkedin.com/in/bkortbus",
+	"DocsURL": "https://github.com/bralkor/unreal_python_pre_init",
+	"MarketplaceURL": "",
+	"SupportURL": "",
+	"EnabledByDefault": true,
+	"CanContainContent": false,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "PythonAddPreInit",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit",
+			"PlatformAllowList": [
+				"Win64"
+			]
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "PythonScriptPlugin",
+			"Enabled": true
+		}
+	]
+}
