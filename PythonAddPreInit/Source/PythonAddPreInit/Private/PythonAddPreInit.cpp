@@ -1,3 +1,5 @@
+// Copyright Brian Kortbus 2025 All Rights Reserved.
+
 #include "PythonAddPreInit.h"
 #include "IPythonScriptPlugin.h"
 
