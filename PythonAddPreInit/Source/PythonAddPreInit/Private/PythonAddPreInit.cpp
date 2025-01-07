@@ -21,7 +21,7 @@ void FPythonAddPreInitModule::RunPreInitScripts() const
         "from pathlib import Path\n"
         "import sys\n"
         "import unreal\n"
-        "for folder_path in sys.path:\n"
+        "for folder_path in sys.path.copy():\n"
         "    sys_folder = Path(folder_path)\n"
         "    for pre_init_file in sys_folder.glob('pre_init_unreal.py'):\n"
         "        print(f'Running Python Pre Init script: {pre_init_file}')\n"
