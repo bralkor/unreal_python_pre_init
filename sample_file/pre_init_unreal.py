@@ -11,3 +11,15 @@ print(
     "\n\t  - The Documents/UnrealEngine/Python folder inside your user directory."
     "\n\t    For example, on Windows 10, this is equivalent to `C:/Users/Username/Documents/UnrealEngine/Python`"
 )
+
+# Any variables or functions declared in this file are accessible
+# automatically in the Unreal Editor Python Console (such as in the Output Log)
+#
+
+pre_init_value = 125
+
+
+def pre_init_demo():
+    print("This function was added to the Python Globals during Python Pre Init")
+    print(f"Global Python Variable `pre_init_value` = `{pre_init_value}`")
+    print(f"Try changing its value in the Python Console and rerunning this function")

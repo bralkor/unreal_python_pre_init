@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
-	"Version": 2,
-	"VersionName": "1.1",
+	"Version": 3,
+	"VersionName": "1.2",
 	"FriendlyName": "Python Add Pre Init",
 	"Description": "Adds support to run pre_init_unreal.py scripts during Editor Startup before the Default Map loads",
 	"Category": "Editor",

@@ -25,7 +25,11 @@ void FPythonAddPreInitModule::RunPreInitScripts() const
         "    sys_folder = Path(folder_path)\n"
         "    for pre_init_file in sys_folder.glob('pre_init_unreal.py'):\n"
         "        print(f'Running Python Pre Init script: {pre_init_file}')\n"
-        "        unreal.PythonScriptLibrary.execute_python_command(str(pre_init_file))"
+        "        unreal.PythonScriptLibrary.execute_python_command_ex(\n"
+        "            str(pre_init_file),\n"
+        "            unreal.PythonCommandExecutionMode.EXECUTE_FILE,\n"
+        "            unreal.PythonFileExecutionScope.PUBLIC\n"
+        "        )"
     );
 
     UE_LOG(LogInit, Log, TEXT("Running Python Pre Init scripts (any files named /pre_init_unreal.py)"));

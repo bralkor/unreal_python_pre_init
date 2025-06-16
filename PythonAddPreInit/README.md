@@ -3,7 +3,8 @@
 # Unreal Python Pre Init
 
 A UE5 Plugin that adds support for a new Python Startup Script: `pre_init_unreal.py`<br>
-Pre Init scripts run **before** the Default Map has been loaded in the Unreal Editor
+Pre Init scripts run **before** the Default Map has been loaded in the Unreal Editor<br>
+Functions and Variables declared in a `pre_init_unreal.py` file will be added to the Python Globals
 
 ---
 <br>
@@ -37,8 +38,11 @@ With this Plugin, Editor startup now looks something like this:
 3) Unreal opens the project's Default Map file
 4) Unreal reopens any cached EUWs (Editor Utility Widgets) from the previous session
 5) Python Init Startup runs (any files named `init_unreal.py` are run)
+6) Any Functions or Variables declared in a `init_unreal.py` file will be added to the Python Globals
 
-This grants us the ability to run Python scripts before the Default Map opens or any cached EUWs reopen
+This grants us the ability to run Python scripts before the Default Map opens or any cached EUWs reopen.
+A common example is for Python-generated Blueprint Function Libraries, this allows us to safely import them
+before any cached EUWs reopen during Editor Startup.
 
 ---
 <br>
